@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
-
 import {
   View,
   TextInput,
   Button,
   StyleSheet,
 } from 'react-native';
+
+import { addTodo } from '../actions'
 
 class AddTodo extends Component {
   constructor(props) {

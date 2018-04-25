@@ -1,12 +1,12 @@
 import React from 'react'
-import FilterLink from '../containers/FilterLink'
-import { VisibilityFilters } from '../actions'
-
 import {
   View,
   Text,
   StyleSheet,
 } from 'react-native';
+
+import { VisibilityFilters } from '../actions'
+import FilterLink from '../containers/FilterLink'
 
 const Footer = () => (
   <View style={styles.inline}>

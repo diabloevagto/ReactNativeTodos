@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import { Text, StyleSheet } from 'react-native';
+import {
+  Text,
+  StyleSheet,
+} from 'react-native';
 
 const Todo = ({ onClick, completed, text }) => (
   <Text
