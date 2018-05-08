@@ -1,7 +1,11 @@
-const visibilityFilter = (state = 'SHOW_ALL', action) => {
-  switch (action.type) {
-    case 'SET_VISIBILITY_FILTER':
-      return action.filter
+import types from '../constants/actionTypes';
+
+const initialState = types.SHOW_ALL
+
+const visibilityFilter = (state = initialState, { type, payload }) => {
+  switch (type) {
+    case types.SET_VISIBILITY_FILTER:
+      return payload.filter
     default:
       return state
   }
