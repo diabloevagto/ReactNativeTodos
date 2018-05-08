@@ -12,11 +12,12 @@ import VisibleTodoList from './containers/VisibleTodoList'
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { text: '' };
   }
 
   componentDidMount() {
-    // this.props.getTodos()
+    this.props.getTodos()
+
+    // console.log(this.props)
   }
 
   render() {
@@ -24,10 +25,10 @@ class App extends Component {
       <View
         style={styles.view}
       >
-        {this.props.fetching === false &&
+        {this.props.fetching === true &&
           <LoadCircle />
         }
-        {this.props.fetching === true &&
+        {this.props.fetching === false &&
           <View>
             <AddTodo />
             <VisibleTodoList />

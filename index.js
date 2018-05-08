@@ -16,3 +16,7 @@ const RNRedux = () => (
 )
 
 AppRegistry.registerComponent('ReactNativeTodos', () => RNRedux);
+
+const unsubscribe = store.subscribe(() =>
+  console.table(store.getState())
+)

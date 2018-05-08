@@ -2,7 +2,7 @@ import types from '../constants/actionTypes';
 
 const initialState = true
 
-const fetching = (state = initialState, { type, payload }) => {
+const fetching = (state = initialState, { type }) => {
   switch (type) {
     case types.GET_TODO_SUCCESS:
       return false

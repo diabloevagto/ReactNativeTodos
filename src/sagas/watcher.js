@@ -1,7 +1,7 @@
-// import types from "../constants/actionTypes";
-// import { takeLatest } from 'redux-saga/effects';
-// import { getTasksSaga } from "./taskSaga";
+import types from "../constants/actionTypes";
+import { takeLatest } from 'redux-saga/effects';
+import { getTodosSaga } from "./getTodosSaga";
 
-// export function* watchGetTasksSaga() {
-//   yield takeLatest(types.GET_TASKS, getTasksSaga);
-// }
+export function* watchGetTasksSaga() {
+  yield takeLatest(types.GET_TODOS, getTodosSaga);
+}
