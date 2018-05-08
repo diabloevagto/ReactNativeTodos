@@ -2,6 +2,10 @@ import types from '../constants/actionTypes';
 
 let nextTodoId = 0
 
+export const getTodos = () => ({
+  type: types.GET_TODOS,
+})
+
 export const addTodo = text => ({
   type: types.ADD_TODO,
   payload: {

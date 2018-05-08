@@ -3,20 +3,15 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { AppRegistry } from 'react-native';
 
-import rootReducer from './src/reducers'
+import configureStore from './src/store/configureStore';
 
-import App from './src/App';
+import AppContainer from './src/AppContainer';
 
-const store = createStore(rootReducer)
-
-store.subscribe(() => {
-  console.log(store.getState().visibilityFilter)
-  console.table(store.getState().todos)
-})
+const store = configureStore();
 
 const RNRedux = () => (
   <Provider store={store}>
-    <App />
+    <AppContainer />
   </Provider>
 )
 
